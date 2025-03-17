@@ -2,7 +2,7 @@
 Report for the project : https://wandb.ai/karekargrishma1234-iit-madras-/cs24m020_dla1_Q4/reports/CS24M020-DA6401-Assignment-1-Report--VmlldzoxMTgyOTc5OA?accessToken=wmdsnvpqdmp4spzk8fqdvx4qcxhpg7mbp7qarz5prfo46ngj34c2rc4jfmacuhwr
 
 # Explanation of the project files:
-1) Q2-3 is the jupyter notebook which contains all the necessary functions for training the Neural Network model used in questions 1-10. It contains the code implementations of question 2 and 3 . It contains the optimisers as mentioned like sgd, momentum based GD, nesterov accelerated GD, RMSProp, Adam as asked in question 3. This code only tests on fashion_mnist data.
+1) Q2-3 is the jupyter notebook which contains all the necessary functions for training the Neural Network model used in questions 1-10. It contains the code implementations of question 1,2 and 3 . It contains the optimisers as mentioned like sgd, momentum based GD, nesterov accelerated GD, RMSProp, Adam as asked in question 3. This code only tests on fashion_mnist data.
 
 2) train.py is the python script to be called as that accepts the following command line arguments with the specified values -
    
