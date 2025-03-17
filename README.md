@@ -72,11 +72,11 @@ python train.py --dataset fashion_mnist --epochs 20 --batch_size 64 --optimizer 
 The repository is organized as follows:
 - train.py: Main script for training the model.
 Classes:
--Start: Handles dataset loading, splitting, and preprocessing.
--Activation_Functions: Implements activation functions and their derivatives.
--Initializer_Methods: Implements weight initialization methods.
--Eval_Metrics: Implements loss functions and accuracy calculation.
--FeedForwardNN: Implements the neural network, including forward/backward propagation and optimization.
+- Start: Handles dataset loading, splitting, and preprocessing.
+- Activation_Functions: Implements activation functions and their derivatives.
+- Initializer_Methods: Implements weight initialization methods.
+- Eval_Metrics: Implements loss functions and accuracy calculation.
+- FeedForwardNN: Implements the neural network, including forward/backward propagation and optimization.
 
 # Results
 The training and validation loss/accuracy are logged using Weights & Biases (wandb). You can visualize the results on the wandb dashboard.
