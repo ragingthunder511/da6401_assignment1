@@ -1,3 +1,4 @@
+%%writefile train.py
 import argparse
 
 import numpy as np
@@ -363,24 +364,24 @@ class FeedForwardNN:
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--wandb_entity", "-we",help = "Wandb Entity used to track experiments in the Weights & Biases dashboard.", default="cs24m020")
-    parser.add_argument("--wandb_project", "-wp",help="Project name used to track experiments in Weights & Biases dashboard", default="Trial")
-    parser.add_argument("--dataset", "-d", help = "dataset", choices=["mnist","fashion_mnist"])
-    parser.add_argument("--epochs","-e", help= "Number of epochs to train neural network", type= int, default=10)
-    parser.add_argument("--batch_size","-b",help="Batch size used to train neural network", type =int, default=32)
-    parser.add_argument("--optimizer","-o",help="batch size is used to train neural network", default= "rmsprop", choices=["sgd","momentum","nag","rmsprop","adam","nadam"])
-    parser.add_argument("--loss","-l", default= "cross_entropy", choices=["mean_squared_error", "cross_entropy"])
-    parser.add_argument("--learning_rate","-lr", default=0.0001, type=float)
-    parser.add_argument("--momentum","-m", default=0.9,type=float)
+    parser.add_argument("--wandb_entity", "-we", default="cs24m020")
+    parser.add_argument("--wandb_project", "-wp", default="Trial")
     parser.add_argument("--beta","-beta", default=0.9, type=float)
     parser.add_argument("--beta1","-beta1", default=0.9,type=float)
+    parser.add_argument("--momentum","-m", default=0.9,type=float)
     parser.add_argument("--beta2","-beta2", default=0.999,type=float)
+    parser.add_argument("--dataset", "-d", choices=["mnist","fashion_mnist"])
+    parser.add_argument("--epochs","-e", type= int, default=10)
+    parser.add_argument("--learning_rate","-lr", default=0.0001, type=float)
     parser.add_argument("--epsilon","-eps",type=float, default = 0.000001)
     parser.add_argument("--weight_decay","-w_d", default=0.005,type=float)
+    parser.add_argument("--optimizer","-o", default= "rmsprop", choices=["sgd","momentum","nesterov","rmsprop","adam","nadam"])
+    parser.add_argument("--loss","-l", default= "cross_entropy", choices=["mean_squared_error", "cross_entropy"])
     parser.add_argument("-w_i","--weight_init", default="xavier",choices=["random","xavier"])
+    parser.add_argument("-a","--activation",choices=["identity","sigmoid","tanh","relu"], default="relu")
     parser.add_argument("--num_layers","-nhl",type=int, default=3)
     parser.add_argument("--hidden_size","-sz",type=int, default=128)
-    parser.add_argument("-a","--activation",choices=["identity","sigmoid","tanh","relu"], default="ReLU")
+    parser.add_argument("--batch_size","-b", type =int, default=32)
 
     args = parser.parse_args()
     print(args.epochs)
