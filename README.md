@@ -6,6 +6,12 @@ Report for the project : https://wandb.ai/karekargrishma1234-iit-madras-/cs24m02
 
 2) train.py is the python script to be called as that accepts the following command line arguments with the specified values -
 
+# Steps to follow:
+Install wandb by command pip install wandb to your system
+Run train.py file with the appropriate arguments given below
+Your run will be logged to wandb to my project "karekargrishma1234-iit-madras-" and entity="cs24m020_dlA1_Q4_1"
+You can view the logs that is the model training accuracy, validation accuracy, testing accuracy and respective losses
+
 # Explanation of implementation of MLFFNN in brief 
 
 This project implements a flexible Feedforward Neural Network (FFNN) from scratch using only NumPy. It is designed for classifying images from the Fashion-MNIST dataset and allows customization of architecture, activation functions, optimization algorithms, and regularization techniques.
@@ -56,15 +62,15 @@ Ensure that you have the Fashion-MNIST dataset loaded properly. The network expe
 
 Define the network architecture by specifying:
 
-Number of hidden layers
+-Number of hidden layers
 
-Number of neurons per layer
+-Number of neurons per layer
 
-Activation functions
+-Activation functions
 
-Learning rate and optimizer
+-Learning rate and optimizer
 
-Batch size and regularization parameters
+-Batch size and regularization parameters
 
 3. Train the Model
 
@@ -74,27 +80,27 @@ Run the training loop, which includes forward propagation, loss computation, bac
 
 After training, test the model on unseen data to measure its generalization performance.
 
-Hyperparameter Tuning
+# Hyperparameter Tuning
 
 The implementation supports hyperparameter tuning using wandb.sweep. Define a sweep configuration specifying ranges for:
 
-Learning rate
+-Learning rate
 
-Number of layers and neurons
+-Number of layers and neurons
 
-Activation functions
+-Activation functions
 
-Optimizers
+-Optimizers
 
-Regularization strength
+-Regularization strength
 
 Run the sweep to find the optimal hyperparameters efficiently.
 
-Results
+# Results
 
 The model logs training loss, validation accuracy, and test performance to Weights & Biases, enabling easy visualization of the learning progress.
 
-Customization
+# Customization
 
 Modify the number of layers and neurons in initialize_weights().
 
@@ -102,7 +108,7 @@ Change activation functions in the forward pass.
 
 Extend the code with additional optimization techniques.
 
-Conclusion
+# Conclusion
 
 This FFNN provides a flexible foundation for deep learning experiments while ensuring full control over training dynamics. Future enhancements could include:
 
